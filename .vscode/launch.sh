@@ -1,8 +1,6 @@
 #!/bin/bash
-r=${1:(-5)}
-echo $r
-if [ $r = .html ]; then #  this is the snag
-    explorer.exe "http://localhost:3000/$1"
+if [ $fileExtname = .html ]; then
+  explorer.exe $url || true
 else
-    node $1
+  node $file
 fi
